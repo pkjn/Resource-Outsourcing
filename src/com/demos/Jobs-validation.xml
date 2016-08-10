@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE validators PUBLIC 
+  		"-//Apache Struts//XWork Validator 1.0.2//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+
+<field name="Job_last_date">
+<field-validator type="requiredstring">
+   <message>
+      Must provide a value
+   </message>
+</field-validator>
+<field-validator type="date">
+   <message>
+  Must Be valid Date MM/DD/YYYY
+   </message>
+</field-validator>
+</field>
+<field name="Job_email">
+<field-validator type="email">
+   <message>
+      Must provide a valid email
+   </message>
+</field-validator>
+<field-validator type="requiredstring">
+   <message>
+      Must provide a value
+   </message>
+</field-validator>
+</field>
+
+<field name="Job_phone">
+<field-validator type="regex">
+<param name="regex">\d{10}</param>
+   <message>
+      Must provide a valid Phone
+   </message>
+</field-validator>
+<field-validator type="requiredstring">
+   <message>
+      Must provide a value
+   </message>
+</field-validator>
+</field>
+<field name="Job_address">
+<field-validator type="requiredstring">
+   <message>
+      Must provide a value
+   </message>
+</field-validator>
+</field>
+
+<field name="Job_pin">
+<field-validator type="regex">
+<param name="regex">\d{6}</param>
+   <message>
+      Must provide a valid Pin
+   </message>
+</field-validator>
+<field-validator type="requiredstring">
+   <message>
+      Must provide a value
+   </message>
+</field-validator>
+</field>
+
+<field name="Job_city">
+<field-validator type="requiredstring">
+   <message>
+      Must provide a value
+   </message>
+</field-validator>
+</field>
+<field name="Job_comp">
+<field-validator type="requiredstring">
+   <message>
+      Must provide a value
+   </message>
+</field-validator>
+</field>
+</validators>

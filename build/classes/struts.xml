@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	<struts>
+	<package name="abc" extends="struts-default">
+	
+	<action name="JobProvider" class="com.demos.JobProvider">
+	<result name="success" type="redirect">/index.jsp</result>
+	<result name="input">/Registration_jp.jsp</result>
+	</action>
+	
+	<action name="JobSeeker" class="com.demos.JobSeeker">
+	<result name="success" type="redirect">/Reg_education_jS.jsp</result>
+	<result name="input">/Registration_jS.jsp</result>
+	</action> 
+	
+	<action name="JobSeeker_update" class="com.demos.JobSeeker" method="update">
+	<result name="success" type="redirect">/jobseeker_edit.jsp</result>
+	<result name="input">/jobseeker_edit_personal.jsp</result>
+	</action> 
+	
+	<action name="JobSeek_Education" class="com.demos.JobSeek_Education">
+	<result name="success" type="redirect">/Reg_Exp_jS.jsp</result>
+	<result name="input">/Reg_education_jS.jsp</result>
+	</action> 
+	<action name="JobSeek_Education_getInfo" class="com.demos.JobSeek_Education" method="getInfo">
+	<result name="success" type="redirect">/jobseeker_edit_education.jsp</result>
+	<result name="input">/jobseeker_edit.jsp</result>
+	</action>
+	
+	<action name="JobSeek_Education_Update" class="com.demos.JobSeek_Education" method="update">
+	<result name="success" type="redirect">/jobseeker_edit.jsp</result>
+	<result name="input">/jobseeker_edit_education.jsp</result>
+	</action>
+	
+	<action name="JobSeek_Professional" class="com.demos.JobSeek_Professional">
+	<result name="success" type="redirect">/index.jsp</result>
+	<result name="input">/Reg_Exp_jS.jsp</result>
+	</action> 
+	
+	<action name="JobSeek_Professional_getInfo" class="com.demos.JobSeek_Professional" method="getInfo">
+	<result name="success" type="redirect">/jobseeker_edit_exp.jsp</result>
+	<result name="input">/jobseeker_edit.jsp</result>
+	</action>
+	
+	<action name="JobSeek_Professional_Update" class="com.demos.JobSeek_Professional" method="update">
+	<result name="success" type="redirect">/jobseeker_edit.jsp</result>
+	<result name="input">/jobseeker_edit_exp.jsp</result>
+	</action>
+	<action name="request" class="com.demos.Myhql">
+	<result name="AD" type="redirect">/admin_home.jsp</result>
+	<result name="JP" type="redirect">/jobprovider_home.jsp</result>
+	<result name="JS" type="redirect">/jobseeker_home.jsp</result>
+	<result name="input">/index.jsp</result>
+	</action>
+	
+	<action name="new_job" class="com.demos.Jobs">
+	<result name="success" type="redirect">/jobprovider_home.jsp</result>
+	<result name="input">/jobprovider_newJobs.jsp</result>
+	</action>	
+	
+	<action name="Jobs_up" class="com.demos.Provider_crud" method="getAllJobs">
+	<result name="success" type="redirect">/jobprovider_AllJobs.jsp</result>
+	<result name="none">/jobprovider_home.jsp</result>
+	</action> 
+	
+	<action name="can_list" class="com.demos.Provider_crud" method="getAllJobs">
+	<result name="success" type="redirect">/jobprovider_cadidateSearch.jsp</result>
+	</action> 
+	
+	<action name="can_list_1" class="com.demos.Provider_crud" method="listOfCondidate">
+	<result name="success" type="redirect">/jobprovider_cadidateList.jsp</result>
+	</action>
+	<action name="Jobs_up1" class="com.demos.JobSeeker_crud" method="getAllJobs">
+	<result name="success" type="redirect">/jobseeker_jobsApply.jsp</result>
+	</action> 
+	<action name="Jobs_applied" class="com.demos.JobSeeker_crud" method="AppliedJobs">
+	<result name="success" type="redirect">/jobseeker_jobsApplied.jsp</result>
+	</action> 
+	<action name="Job_apply" class="com.demos.ApplyJob">
+	<result name="success" type="redirect">/jobseeker_jobsApply.jsp</result>
+	</action>
+	<action name="shortlist" class="com.demos.JobSeeker_crud" method="shortListed">
+	<result name="success" type="redirect">/jobseeker_inbox.jsp</result>
+	</action>
+
+	<action name="can_edu" class="com.demos.Provider_crud" method="showEducation">
+	<result name="success" type="redirect">/job_provider_cadidate_education.jsp</result>
+	</action>
+	<action name="can_pro" class="com.demos.Provider_crud" method="showPro">
+	<result name="success" type="redirect">/job_provider_cadidate_pro.jsp</result>
+	</action>
+	
+	<action name="selected_can" class="com.demos.JobProvider_selected">
+	<result name="success" type="redirect">/jobprovider_cadidateList.jsp</result>
+	</action>
+	
+	<action name="admin" class="com.demos.Admin">
+	<result name="success" type="redirect">/admin_home.jsp</result>
+	<result name="input">/Registration_Admin.jsp</result>
+	</action>
+	<action name="update_admin" class="com.demos.Admin" method="update">
+	<result name="success" type="redirect">/admin_home.jsp</result>
+	<result name="input">/admin_edit.jsp</result>
+	</action>
+	<action name="all_admin" class="com.demos.Admin_Work" method="allAdmin"> 
+	<result name="success" type="redirect">/admin_Alladmins.jsp</result>
+	
+	</action>
+	<action name="all_js" class="com.demos.Admin_Work" method="allJs">
+	<result name="success" type="redirect">/admin_allJs.jsp</result>
+	
+	</action>
+	<action name="all_jp" class="com.demos.Admin_Work" method="allJp">
+	<result name="success" type="redirect">/admin_AllJp.jsp</result>
+	
+	</action>
+	</package>
+	</struts>

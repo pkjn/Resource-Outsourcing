@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators>
+<decorator name="simple" page="/WEB-INF/decorator/base.jsp">
+<pattern>*</pattern>
+</decorator>
+<decorator name="admin" page="/WEB-INF/decorator/adminlayout.jsp">
+<pattern>/admin_home.jsp</pattern>
+<pattern>/admin_AllJp.jsp</pattern>
+<pattern>/admin_allJs.jsp</pattern>
+<pattern>/admin_Alladmins.jsp</pattern>
+<pattern>/admin_works.jsp</pattern>
+<pattern>/admin_edit.jsp</pattern>
+<pattern>/admin_signout.jsp</pattern>
+</decorator>
+<decorator name="jobpo" page="/WEB-INF/decorator/jobprolayout.jsp">
+<pattern>/jobprovider_home.jsp</pattern>
+<pattern>/jobprovider_AllJobs.jsp</pattern>
+<pattern>/jobprovider_newJobs.jsp</pattern>
+<pattern>/jobprovider_sendreply.jsp</pattern>
+<pattern>/jobprovider_cadidateSearch.jsp</pattern>
+<pattern>/jobprovider_signout.jsp</pattern>
+<pattern>/jobprovider_cadidateList.jsp</pattern>
+<pattern>/job_provider_cadidate_education.jsp</pattern>
+<pattern>/job_provider_cadidate_pro.jsp</pattern>
+</decorator>
+<decorator name="jobseeker" page="/WEB-INF/decorator/jobseekerlayout.jsp">
+<pattern>/jobseeker.jsp</pattern>
+<pattern>/jobseekerlogin.jsp</pattern>
+<pattern>/jobseeker_home.jsp</pattern>
+<pattern>/jobseeker_jobsApplied.jsp</pattern>
+<pattern>/jobseeker_edit.jsp</pattern>
+<pattern>/jobseeker_edit_education.jsp</pattern>
+<pattern>/jobseeker_edit_exp.jsp</pattern>
+<pattern>/jobseeker_edit_personal.jsp</pattern>
+<pattern>/jobseeker_jobsearch.jsp</pattern>
+<pattern>/jobseeker_jobsApply.jsp</pattern>
+<pattern>/jobseeker_signout.jsp</pattern>
+<pattern>/jobseeker_jobsDetails.jsp</pattern>
+<pattern>/jobseeker_inbox.jsp</pattern>
+</decorator>
+</decorators>

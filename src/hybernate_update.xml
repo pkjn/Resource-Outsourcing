@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	<hibernate-configuration>
+<session-factory>
+<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+<property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+<property name="connection.username">pkjn</property>
+<property name="connection.password">pkjn</property>
+<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+<property name="show_sql">true</property>
+<property name="hbm2ddl.auto">update</property>
+<mapping class="com.demos.Admin"/>
+<mapping class="com.demos.JobProvider"></mapping>
+<mapping class="com.demos.JobSeeker"></mapping>
+<mapping class="com.demos.JobSeek_Education"/>
+<mapping class="com.demos.JobSeek_Professional"/>
+<mapping class="com.demos.Jobs"></mapping>
+<mapping class="com.demos.ApplyJob"></mapping>
+<mapping class="com.demos.JobProvider_selected"/>
+</session-factory>
+</hibernate-configuration>
